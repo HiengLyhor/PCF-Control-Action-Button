@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SyncActionButton" constructor="SyncActionButton" version="0.0.1" display-name-key="SyncActionButton" description-key="SyncActionButton description" control-type="standard" >
+    
+    <property name="BoundField" display-name-key="Bound Action Button Field" of-type-group="ActionButtonType" usage="bound" required="true" />
+    <property name="ButtonText" display-name-key="Button Display Text" of-type="SingleLine.Text" default-value="Button Text" usage="input" required="true" />
+    <property name="ButtonWidth" display-name-key="Button Width" description-key="Scale by percentage (%) default is 100%" of-type="Decimal" default-value="Button Text" usage="input" required="true" />
+    <property name="ValueSetOnClick" display-name-key="Value Set When Click" description-key="Value set to the field when the button is clicked" of-type="SingleLine.Text" default-value="1" usage="input" required="true" />
+    
+    <property name="ButtonColor" display-name-key="Button Color" usage="input" of-type="Enum" default-value="1" required="true">
+      <value display-name-key="Red" name="Red">1</value>
+      <value display-name-key="Green" name="Green">2</value>
+      <value display-name-key="Blue" name="Blue">3</value>
+      <value display-name-key="Orange" name="Orange">4</value>
+      <value display-name-key="Custom" name="Custom">5</value>
+    </property>
+
+    <property name="ColorCode" display-name-key="Custom Color Code" of-type="SingleLine.Text" usage="input" />
+
+    <type-group name="ActionButtonType">
+      <type>TwoOptions</type>
+      <type>OptionSet</type>
+      <type>SingleLine.Text</type>
+    </type-group>
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/style.css" order="1" />
+    </resources>
+
+  </control>
+</manifest>
