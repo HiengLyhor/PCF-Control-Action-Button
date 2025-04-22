@@ -59,7 +59,10 @@ export class SyncActionButton implements ComponentFramework.StandardControl<IInp
         this._button.style.backgroundColor = this.buttonColor;  // Background color
         this._button.style.border = `1px solid ${colorPalette['Border Color']}`; // Border color
         this._button.style.color = colorPalette['Text Color'];  // Text color
-        this._button.style.width = this._context.parameters.ButtonWidth.raw?.toString() + "%" || "100%"; // Button width
+        
+        this._button.style.width = this._context.parameters.ButtonWidth.raw?.toLowerCase() === "auto"
+            ? "auto"
+            : `${this._context.parameters.ButtonWidth.raw}%`;
 
         // Hover styles
         this._button.addEventListener("mouseenter", () => {

@@ -4,7 +4,7 @@
     
     <property name="BoundField" display-name-key="Bound Action Button Field" of-type-group="ActionButtonType" usage="bound" required="true" />
     <property name="ButtonText" display-name-key="Button Display Text" of-type="SingleLine.Text" default-value="Button Text" usage="input" required="true" />
-    <property name="ButtonWidth" display-name-key="Button Width" description-key="Scale by percentage (%) default is 100%" of-type="Decimal" default-value="Button Text" usage="input" required="true" />
+    <property name="ButtonWidth" display-name-key="Button Width" description-key="Scale by percentage (eg. 25, 50, 100 or auto)" of-type="SingleLine.Text" default-value="auto" usage="input" required="true" />
     <property name="ValueSetOnClick" display-name-key="Value Set When Click" description-key="Value set to the field when the button is clicked" of-type="SingleLine.Text" default-value="1" usage="input" required="true" />
     
     <property name="ButtonColor" display-name-key="Button Color" usage="input" of-type="Enum" default-value="1" required="true">
